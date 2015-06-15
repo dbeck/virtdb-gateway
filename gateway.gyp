@@ -1,7 +1,9 @@
 {
   'variables': {
     'gateway_sources': [
-                         'src/gateway/dummy.cc',
+                         'src/gateway/simple_gateway.cc',   'src/gateway/simple_gateway.hh',
+                         'src/gateway/zmq_gateway.cc',      'src/gateway/zmq_gateway.hh',
+                         'src/gateway/virtdb_gateway.cc',   'src/gateway/virtdb_gateway.hh',
                          # header only helpers
                          'src/gateway/exception.hh',
                        ],
