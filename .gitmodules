@@ -1,0 +1,16 @@
+[submodule "deps_/fsm"]
+	path = deps_/fsm
+	url = https://github.com/starschema/virtdb-fsm.git
+[submodule "deps_/queue"]
+	path = deps_/queue
+	url = https://github.com/starschema/virtdb-queue.git
+[submodule "deps_/gtest"]
+	path = deps_/gtest
+	url = https://github.com/starschema/virtdb-gtest.git
+	branch = gtest-1.7.0
+[submodule "deps_/lz4"]
+	path = deps_/lz4
+	url = https://github.com/starschema/lz4.git
+[submodule "deps_/proto"]
+	path = deps_/proto
+	url = https://github.com/starschema/virtdb-proto.git
