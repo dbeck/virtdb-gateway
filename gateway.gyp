@@ -67,14 +67,31 @@
     {
       'target_name':     'gateway',
       'type':            'static_library',
+      'dependencies':  [
+                         './deps_/fsm/fsm.gyp:fsm',
+                         './deps_/queue/queue.gyp:queue',
+                       ],
+      'include_dirs':  [
+                         './deps_/fsm/src/',
+                         './deps_/queue/src/',
+                       ],
       'defines':       [ 'USING_GATEWAY_LIB',  ],
       'sources':       [ '<@(gateway_sources)', ],
     },
     {
       'target_name':     'gateway_test',
       'type':            'executable',
-      'dependencies':  [ 'gateway', 'deps_/gtest/gyp/gtest.gyp:gtest_lib', ],
-      'include_dirs':  [ './deps_/gtest/include/', ],
+      'dependencies':  [
+                         'gateway',
+                         './deps_/fsm/fsm.gyp:fsm',
+                         './deps_/queue/queue.gyp:queue',
+                         './deps_/gtest/gyp/gtest.gyp:gtest_lib',
+                       ],
+      'include_dirs':  [
+                         './deps_/fsm/src/',
+                         './deps_/queue/src/',
+                         './deps_/gtest/include/',
+                       ],
       'sources':       [ 'test/gateway_test.cc', ],
     },
   ],
