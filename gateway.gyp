@@ -1,9 +1,18 @@
 {
   'variables': {
     'gateway_sources': [
-                         'src/gateway/simple_gateway.cc',   'src/gateway/simple_gateway.hh',
-                         'src/gateway/zmq_gateway.cc',      'src/gateway/zmq_gateway.hh',
-                         'src/gateway/virtdb_gateway.cc',   'src/gateway/virtdb_gateway.hh',
+                         # high level gateway types
+                         'src/gateway/simple_gateway.cc',      'src/gateway/simple_gateway.hh',
+                         'src/gateway/streaming_gateway.cc',   'src/gateway/streaming_gateway.hh',
+                         'src/gateway/zmq_gateway.cc',         'src/gateway/zmq_gateway.hh',
+                         'src/gateway/virtdb_gateway.cc',      'src/gateway/virtdb_gateway.hh',
+                         # stream building blocks
+                         'src/gateway/duplex_stream.cc',       'src/gateway/duplex_stream.hh',
+                         'src/gateway/read_stream.cc',         'src/gateway/read_stream.hh',
+                         'src/gateway/write_stream.cc',        'src/gateway/write_stream.hh',
+                         # state machines
+                         'src/gateway/gateway_fsm.cc',         'src/gateway/gateway_fsm.hh',
+                         'src/gateway/stream_fsm.cc',          'src/gateway/stream_fsm.hh',
                          # header only helpers
                          'src/gateway/exception.hh',
                        ],
