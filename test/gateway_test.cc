@@ -1,9 +1,16 @@
 #include <gtest/gtest.h>
 #include <gateway/exception.hh>
+// TODO : remove ... :
 #include <gateway/simple_gateway.hh>
+// -- end remove
 #include <gateway/streaming_gateway.hh>
 #include <gateway/zmq_gateway.hh>
 #include <gateway/virtdb_gateway.hh>
+// revamp
+#include <gateway/read_stream.hh>
+#include <gateway/write_stream.hh>
+#include <gateway/message.hh>
+// std
 #include <future>
 #include <iostream>
 #include <string.h>
@@ -17,9 +24,14 @@ using namespace virtdb::queue;
 namespace virtdb { namespace test {
   
   class SimpleGatewayTest : public ::testing::Test { };
-  class StreamingGatewayTest : public ::testing::Test { };
   
-  class FsmTest : public ::testing::Test { };
+  // revamp:
+  class ReadStreamTest : public ::testing::Test { };
+  class WriteStreamTest : public ::testing::Test { };
+  class StreamFsmTest : public ::testing::Test { };
+  class DuplexStreamTest : public ::testing::Test { };
+  class GatewayFsmTest : public ::testing::Test { };
+  class StreamingGatewayTest : public ::testing::Test { };
   
   auto trace = [](uint16_t seqno,
                   const std::string & desc,

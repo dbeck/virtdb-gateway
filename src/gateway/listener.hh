@@ -1,5 +1,7 @@
-#include <gateway/gateway_fsm.hh>
+#pragma once
 
 namespace virtdb { namespace gateway {
   
+  
 }}
+

@@ -3,4 +3,3 @@
 namespace virtdb { namespace gateway {
   
 }}
-
