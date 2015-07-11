@@ -14,7 +14,8 @@
                          'src/gateway/message.cc',             'src/gateway/message.hh',
                          # state machines
                          'src/gateway/gateway_fsm.cc',         'src/gateway/gateway_fsm.hh',
-                         'src/gateway/stream_fsm.cc',          'src/gateway/stream_fsm.hh',
+                         'src/gateway/writer_fsm.cc',          'src/gateway/writer_fsm.hh',
+                         'src/gateway/reader_fsm.cc',          'src/gateway/reader_fsm.hh',
                          'src/gateway/listener_fsm.cc',        'src/gateway/listener_fsm.hh',
                          # header only helpers
                          'src/gateway/exception.hh',

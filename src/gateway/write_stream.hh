@@ -2,7 +2,7 @@
 
 #include <string>
 #include <queue/simple_queue.hh>
-#include <gateway/stream_fsm.hh>
+#include <gateway/writer_fsm.hh>
 #include <gateway/message.hh>
 
 namespace virtdb { namespace gateway {
